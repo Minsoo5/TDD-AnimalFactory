@@ -18,6 +18,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)`
     public void addTest() {
         //Given
+        DogHouse.clear();
         Dog dog = new Dog("Doggy", date, 2233);
         DogHouse.add(dog);
 
@@ -34,6 +35,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     public void removeByIdTest() {
         //Given
+        DogHouse.clear();
         Dog dog = new Dog("Doggy", date, 2233);
         DogHouse.remove(2233);
 
@@ -51,6 +53,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Dog dog)`
     public void removeByDogTest() {
         //Given
+        DogHouse.clear();
         Dog dog = new Dog("Doggy", date, 2233);
         DogHouse.remove(dog);
 
@@ -68,6 +71,7 @@ public class DogHouseTest {
     // TODO - Create tests for `Dog getDogById(Integer id)`
     public void getDogByIdTest() {
         //Given
+        DogHouse.clear();
         Dog dog = new Dog("Doggy", date, 2233);
         Dog dog2 = new Dog("Doggy", date, 2234);
         DogHouse.add(dog);
@@ -85,6 +89,7 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
     public void getNumberOfDogsTest() {
         //Given
+        DogHouse.clear();
         Dog dog = new Dog("Doggy", date, 2233);
         Dog dog2 = new Dog("Doggy", date, 2234);
         DogHouse.add(dog);

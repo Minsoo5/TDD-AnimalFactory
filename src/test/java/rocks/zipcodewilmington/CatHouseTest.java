@@ -20,11 +20,11 @@ public class CatHouseTest {
 
     public void addCatTest() {
         //Given
-        Cat cat = new Cat("Tabby", date, 2233);
-        CatHouse.add(cat);
+        Cat cat1 = new Cat("Tabby", date, 2233);
+        CatHouse.add(cat1);
 
         //When
-        Cat actualCat = cat;
+        Cat actualCat = cat1;
         Cat expectedCat = CatHouse.getCatById(2233);
 
         //Then
@@ -36,8 +36,8 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     public void removeIntTest() {
         //Given
-        Cat cat = new Cat("Tabby", date, 2233);
-        CatHouse.add(cat);
+        Cat cat2 = new Cat("Tabby", date, 223);
+        CatHouse.add(cat2);
 
         //When
         CatHouse.remove(2233);
@@ -53,13 +53,13 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Cat cat)`
     public void removeCatTest() {
         //Given
-        Cat cat = new Cat("Tabby", date, 2233);
-        CatHouse.add(cat);
+        Cat cat3 = new Cat("Tabby", date, 22);
+        CatHouse.add(cat3);
 
         //When
-        CatHouse.remove(cat);
+        CatHouse.remove(cat3);
         Cat expectedCat = null;
-        Cat actualCat = CatHouse.getCatById(2233);
+        Cat actualCat = CatHouse.getCatById(22);
 
         //Then
         Assert.assertEquals(expectedCat, actualCat);
@@ -70,11 +70,11 @@ public class CatHouseTest {
     // TODO - Create tests for `Cat getCatById(Integer id)`
     public void getCatByIdTest() {
         //Given
-        Cat cat = new Cat("Tabby", date, 2233);
-        CatHouse.add(cat);
+        Cat cat4 = new Cat("Tabby", date, 2233);
+        CatHouse.add(cat4);
 
         //When
-        Cat expectedCat = cat;
+        Cat expectedCat = cat4;
         Cat actualCat = CatHouse.getCatById(2233);
 
         //Then
@@ -86,8 +86,9 @@ public class CatHouseTest {
     // TODO - Create tests for `Integer getNumberOfCats()`
     public void getNumberOfCatsTest() {
         //Given
-        Cat cat = new Cat("Tabby", date, 2233);
-        CatHouse.add(cat);
+        CatHouse.clear();
+        Cat cat5 = new Cat("Tabby", date, 33);
+        CatHouse.add(cat5);
 
         //When
         int expectedInt = 1;
